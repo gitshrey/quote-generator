@@ -1,108 +1,133 @@
-html{
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    min-height: 100vh;
-    
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,42,66,1) 35%, rgba(0,212,255,1) 100%); 
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Montserrat Alternates", sans-serif;
 
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: white;
-    font-weight: 800;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(42, 42, 66, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
-.quote-generator{
-    width: auto;
-    max-width: 900px;
-    
-    padding: 20px 30px;
-
-    border: 5px;
-    border-radius: 25px;
-    
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-   
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 1px transparent;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding-top: 20px;
+  width: auto;
 }
 
-.quote-text{
-    font-size: 2rem;
+.heading > h1 {
+  font-weight: 800;
 }
 
-.long-quote{
-font-size: 1.6rem;
-
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-top: 50px;
 }
 
-.quote-icon{
-    font-size: 2.85rem;
+.quoteGen {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
 }
 
-.quote-author{
-    margin-top: 15px;
-    font-size: 1.5rem;
-    font-weight: 400;
-    font-style: italic;
+.quote-generator {
+  width: auto;
+  max-width: 900px;
+
+  padding: 20px 30px;
+
+  border: 5px;
+  border-radius: 25px;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.quote-button{
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-between;
+.quote-text {
+  font-size: 2rem;
 }
 
-button{
-    cursor: pointer;
-    font-size: 1.2rem;
-    height: 2.5rem;
-    border: none;
-    border-radius: 10px;
-    padding: 0.5rem 1.2rem;
-    color: rgb(255, 255, 255);
-    background-color: #000000;
-    outline: none;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-
+.long-quote {
+  font-size: 1.6rem;
 }
 
-button:hover{
-    filter: brightness(150%);
+.quote-icon {
+  font-size: 2.85rem;
 }
 
-button:active{
-    transform: translate(0,0.3rem);
-    box-shadow: 0 0.1rem rgba(0, 0, 0, 0.2);
-
+.quote-author {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
 }
 
-.twitter-button:hover{
-    color: #38a1f3;
-   
-
+.quote-button {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.fa-twitter{
-    font-size: 1.5rem;
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1.2rem;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+button:hover {
+  filter: brightness(150%);
+}
 
+button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(0, 0, 0, 0.2);
+}
 
+.twitter-button:hover {
+  color: #38a1f3;
+}
 
+.fa-twitter {
+  font-size: 1.5rem;
+}
 
 /* media query */
-@media screen and (max-width:1000px) {
-    .quote-generator{
-        margin: auto 10px;
-    }
+@media screen and (max-width: 1000px) {
+  .quote-generator {
+    margin: auto 10px;
+  }
 
-    .quote-text{
-        font-size: 1.5rem;
-    }
-    
+  .quote-text {
+    font-size: 1.5rem;
+  }
 }
